@@ -1,0 +1,70 @@
+body {
+  font-family: 'Barlow Semi Condensed', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background-image: radial-gradient(circle, #1f3756, #141539);
+  padding: 1.5em;
+}
+
+header {
+  border: 3px solid #606e85;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin-bottom: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  margin-left: 0.5em;
+}
+
+header img {
+  display: block;
+  max-height: 60px;
+}
+
+header .scoreboard {
+  text-align: center;
+  padding: 0.5em 1.5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ffffff;
+  font-weight: 700;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+header .scoreboard span {
+  display: block;
+}
+
+header .scoreboard .score-text {
+  color: #2a46c0;
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+header .scoreboard .score {
+  color: #3b4363;
+  font-size: 2em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
