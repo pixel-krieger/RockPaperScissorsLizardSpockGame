@@ -5,6 +5,17 @@ body {
   padding: 1.5em;
 }
 
+.container {
+  max-width: 680px;
+}
+
+.btn {
+  display: block;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: auto;
+}
+
 header {
   border: 3px solid #606e85;
   border-radius: 10px;
@@ -64,6 +75,7 @@ header .scoreboard .score {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 240px;
+  max-width: 300px;
   margin: 8em 0;
 }
 
@@ -128,6 +140,28 @@ header .scoreboard .score {
 
 .shapes .rock {
   border-color: #dc2e4e;
+}
+
+.choices {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.choices .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.choices .result {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.choices .result span {
+  display: block;
 }
 
 .attribution {
