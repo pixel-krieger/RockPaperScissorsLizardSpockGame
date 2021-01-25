@@ -11,9 +11,14 @@ body {
 
 .btn {
   display: block;
+  border: 1px solid #ffffff;
   border-radius: 5px;
-  padding: 10px 20px;
-  margin: auto;
+  padding: 15px 40px;
+  margin: 1em auto;
+}
+
+.invisible {
+  display: none;
 }
 
 header {
@@ -69,6 +74,10 @@ header .scoreboard .score {
   font-size: 2em;
 }
 
+.summary {
+  margin: 7em 0;
+}
+
 .shapes {
   background-image: url("../images/bg-pentagon.svg");
   background-size: contain;
@@ -76,7 +85,6 @@ header .scoreboard .score {
   background-repeat: no-repeat;
   min-height: 240px;
   max-width: 300px;
-  margin: 8em 0;
 }
 
 .shapes .row {
@@ -108,7 +116,8 @@ header .scoreboard .score {
           transform: translateY(50%);
 }
 
-.shapes .shape {
+.shape {
+  display: block;
   height: 80px;
   width: 80px;
   border-width: 10px;
@@ -116,29 +125,29 @@ header .scoreboard .score {
   border-radius: 50%;
 }
 
-.shapes .shape img {
+.shape img {
   display: block;
   width: 60%;
   margin: auto;
 }
 
-.shapes .scissors {
+.scissors {
   border-color: #ec9e0e;
 }
 
-.shapes .spock {
+.spock {
   border-color: #40b9ce;
 }
 
-.shapes .paper {
+.paper {
   border-color: #4865f4;
 }
 
-.shapes .lizard {
+.lizard {
   border-color: #834fe3;
 }
 
-.shapes .rock {
+.rock {
   border-color: #dc2e4e;
 }
 
@@ -151,25 +160,48 @@ header .scoreboard .score {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.choices .column {
+  text-align: center;
+}
+
+.choices .shape {
+  margin: auto;
+  width: calc(80px + 25px);
+  height: calc(80px + 25px);
 }
 
 .choices .result {
   text-align: center;
   font-size: 2.5em;
+  font-weight: 700;
 }
 
 .choices .result span {
   display: block;
 }
 
+.play-again {
+  text-transform: uppercase;
+}
+
+.rules {
+  background-color: transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: #ffffff;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #6d8aff;
 }
 /*# sourceMappingURL=style.css.map */

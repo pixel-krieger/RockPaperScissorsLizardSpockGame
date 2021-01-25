@@ -1,3 +1,4 @@
+$shape-size: 80px;
 body{
     font-family: 'Barlow Semi Condensed', Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -9,9 +10,13 @@ body{
 }
 .btn{
     display: block;
+    border: 1px solid #ffffff;
     border-radius: 5px;
-    padding: 10px 20px;
-    margin: auto;
+    padding: 15px 40px;
+    margin: 1em auto;
+}
+.invisible{
+    display: none;
 }
 header{
     border: 3px solid hsl(217, 16%, 45%);
@@ -50,6 +55,9 @@ header{
         }
     }
 }
+.summary{
+    margin: 7em 0;
+}
 .shapes{
     background-image: url('../images/bg-pentagon.svg');
     background-size: contain;
@@ -57,7 +65,6 @@ header{
     background-repeat: no-repeat;
     min-height: 240px;
     max-width: 300px;
-    margin: 8em 0;
     .row{
         display: flex;
         &:first-child{
@@ -73,59 +80,73 @@ header{
             transform: translateY(50%);
         }
     }
-    .shape{
-        height: 80px;
-        width: 80px;
-        border-width: 10px;
-        border-style: solid;
-        border-radius: 50%;
-        // margin-top: -5px;
-        // &:first-child{
-        //     transform: translateY(-50%);
-        // }
-        img{
-            display: block;
-            width: 60%;
-            margin: auto;
-        }
+}
+.shape{
+    display: block;
+    height: $shape-size;
+    width: $shape-size;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+    img{
+        display: block;
+        width: 60%;
+        margin: auto;
     }
-    .scissors{
-        border-color: hsl(39, 89%, 49%);
-    }
-    .spock{
-        border-color: hsl(189, 59%, 53%);
-    }
-    .paper{
-        border-color: hsl(230, 89%, 62%);
-    }
-    .lizard{
-        border-color: hsl(261, 73%, 60%);
-    }
-    .rock{
-        border-color: hsl(349, 71%, 52%);
-    }
+}
+.scissors{
+    border-color: hsl(39, 89%, 49%);
+}
+.spock{
+    border-color: hsl(189, 59%, 53%);
+}
+.paper{
+    border-color: hsl(230, 89%, 62%);
+}
+.lizard{
+    border-color: hsl(261, 73%, 60%);
+}
+.rock{
+    border-color: hsl(349, 71%, 52%);
 }
 .choices{
     color: #ffffff;
     text-transform: uppercase;
     .row{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+    .column{
+        text-align: center;
+    }
+    .shape{
+        margin: auto;
+        width: calc(#{$shape-size} + 25px);
+        height: calc(#{$shape-size} + 25px);
     }
     .result{
         text-align: center;
         font-size: 2.5em;
+        font-weight: 700;
         span{
             display: block;
         }
     }
 }
-//Styles included with starter files
+.play-again{
+    text-transform: uppercase;
+}
+.rules{
+    background-color: transparent;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+//Attribution text
 .attribution {
     font-size: 11px;
     text-align: center;
+    color: #ffffff;
 }
-
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: rgb(109, 138, 255);
 }
