@@ -16,6 +16,9 @@ body{
 .invisible{
     display: none;
 }
+.container{
+    max-width: 1366px;
+}
 header, .summary{
     max-width: 680px;
     margin: auto;
