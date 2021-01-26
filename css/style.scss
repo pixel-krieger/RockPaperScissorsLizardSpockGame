@@ -1,14 +1,10 @@
 $shape-size: 90px;
+$light-text: #ffffff;
 body{
     font-family: 'Barlow Semi Condensed', Arial, Helvetica, sans-serif;
     font-size: 18px;
     background-image: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-    margin: 0;
-}
-.container{
-    max-width: 680px;
     margin: 1.5em;
-    box-sizing: border-box;
 }
 .btn{
     display: block;
@@ -19,6 +15,10 @@ body{
 }
 .invisible{
     display: none;
+}
+header, .summary{
+    max-width: 680px;
+    margin: auto;
 }
 header{
     border: 3px solid hsl(217, 16%, 45%);
@@ -58,7 +58,8 @@ header{
     }
 }
 .summary{
-    margin: 7em 0;
+    margin-top: 7em;
+    margin-bottom: 7em;
 }
 .shapes{
     background-image: url('../images/bg-pentagon.svg');
@@ -99,6 +100,7 @@ header{
     border-width: 10px;
     border-style: solid;
     border-radius: 50%;
+    cursor: pointer;
     img{
         display: block;
         width: 60%;
@@ -123,9 +125,11 @@ header{
 .unknown{
     border: none;
     background-color: #ffffff;
+    width: calc(#{$shape-size} - 10px) !important;
+    height: calc(#{$shape-size} - 10px) !important;
 }
 .choices{
-    color: #ffffff;
+    color: $light-text;
     text-transform: uppercase;
     .row{
         display: flex;
@@ -150,11 +154,13 @@ header{
 }
 .play-again{
     text-transform: uppercase;
+    cursor: pointer;
 }
 .rules{
     background-color: transparent;
-    color: #ffffff;
+    color: $light-text;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .modal{
     overflow: auto;
@@ -169,11 +175,14 @@ header{
         box-sizing: border-box;
         background-color: #ffffff;
         border-radius: 10px;
-        padding: 15% 1.5em;
+        margin: auto;
+        padding: 6em 1.5em;
         text-align: center;
-        height: 100%;
+        min-height: fit-content;
         max-height: 750px;
+        max-width: 375px;
         h2{
+            margin: 0;
             text-transform: uppercase;
         }
         img{
@@ -183,8 +192,12 @@ header{
         }
         .close{
             display: block;
+            margin: auto;
+            padding: 0;
+            border: none;
+            background: transparent;
             color: #aaaaaa;
-            font-size: 3em;
+            font-size: 2.5em;
             cursor: pointer;
         }
     }
@@ -193,8 +206,39 @@ header{
 .attribution {
     font-size: 11px;
     text-align: center;
-    color: #ffffff;
+    color: $light-text;
 }
 .attribution a {
     color: rgb(109, 138, 255);
+}
+@media screen and (min-width: 500px){
+    .summary{
+        margin-top: 4.5em;
+        margin-bottom: 3em;
+    }
+    .rules{
+        float: right;
+    }
+    .modal{
+        .modal-content{
+            position: relative;
+            padding: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            h2{
+                text-align: left;
+            }
+            img{
+                margin: 10px 0;
+            }
+            .close{
+                position: absolute;
+                top: 15px;
+                right: 10px;
+            }
+        }
+    }
+    .attribution{
+        clear: both;
+    }
 }

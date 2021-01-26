@@ -2,14 +2,7 @@ body {
   font-family: 'Barlow Semi Condensed', Arial, Helvetica, sans-serif;
   font-size: 18px;
   background-image: radial-gradient(circle, #1f3756, #141539);
-  margin: 0;
-}
-
-.container {
-  max-width: 680px;
   margin: 1.5em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .btn {
@@ -22,6 +15,11 @@ body {
 
 .invisible {
   display: none;
+}
+
+header, .summary {
+  max-width: 680px;
+  margin: auto;
 }
 
 header {
@@ -78,7 +76,8 @@ header .scoreboard .score {
 }
 
 .summary {
-  margin: 7em 0;
+  margin-top: 7em;
+  margin-bottom: 7em;
 }
 
 .shapes {
@@ -137,6 +136,7 @@ header .scoreboard .score {
   border-width: 10px;
   border-style: solid;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .shape img {
@@ -168,6 +168,8 @@ header .scoreboard .score {
 .unknown {
   border: none;
   background-color: #ffffff;
+  width: calc(90px - 10px) !important;
+  height: calc(90px - 10px) !important;
 }
 
 .choices {
@@ -206,12 +208,14 @@ header .scoreboard .score {
 
 .play-again {
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .rules {
   background-color: transparent;
   color: #ffffff;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .modal {
@@ -230,13 +234,18 @@ header .scoreboard .score {
           box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 15% 1.5em;
+  margin: auto;
+  padding: 6em 1.5em;
   text-align: center;
-  height: 100%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   max-height: 750px;
+  max-width: 375px;
 }
 
 .modal .modal-content h2 {
+  margin: 0;
   text-transform: uppercase;
 }
 
@@ -248,8 +257,12 @@ header .scoreboard .score {
 
 .modal .modal-content .close {
   display: block;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
   color: #aaaaaa;
-  font-size: 3em;
+  font-size: 2.5em;
   cursor: pointer;
 }
 
@@ -261,5 +274,36 @@ header .scoreboard .score {
 
 .attribution a {
   color: #6d8aff;
+}
+
+@media screen and (min-width: 500px) {
+  .summary {
+    margin-top: 4.5em;
+    margin-bottom: 3em;
+  }
+  .rules {
+    float: right;
+  }
+  .modal .modal-content {
+    position: relative;
+    padding: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .modal .modal-content h2 {
+    text-align: left;
+  }
+  .modal .modal-content img {
+    margin: 10px 0;
+  }
+  .modal .modal-content .close {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+  .attribution {
+    clear: both;
+  }
 }
 /*# sourceMappingURL=style.css.map */
