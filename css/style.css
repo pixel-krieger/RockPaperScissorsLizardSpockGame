@@ -14,14 +14,14 @@ body {
 }
 
 .invisible {
-  display: none;
+  display: none !important;
 }
 
 .container {
   max-width: 1366px;
 }
 
-header, .summary {
+header, #main {
   max-width: 680px;
   margin: auto;
 }
@@ -79,7 +79,7 @@ header .scoreboard .score {
   font-size: 2em;
 }
 
-.summary {
+#main {
   margin-top: 7em;
   margin-bottom: 7em;
 }
@@ -281,7 +281,7 @@ header .scoreboard .score {
 }
 
 @media screen and (min-width: 500px) {
-  .summary {
+  #main {
     margin-top: 4.5em;
     margin-bottom: 3em;
   }

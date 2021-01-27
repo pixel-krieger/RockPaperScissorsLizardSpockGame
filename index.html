@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onload="checkScore()">
     <div class="container">
         <header>
             <h1><img src="images/logo-bonus.svg" alt="Rock, Paper, Scissors, Lizard, Spock"></h1>
             <div class="scoreboard">
                 <span class="score-text">Score</span>
-                <span class="score">12</span>
+                <span class="score">00</span>
             </div>
         </header>
-        <section class="summary">
+        <div id="main" role="main">
             <section class="shapes">
                 <div class="row">
                     <button class="shape scissors"><img src="images/icon-scissors.svg" alt="Scissors"></button>
@@ -36,7 +36,7 @@
             <section class="choices invisible">
                 <div class="row">
                     <div class="column">
-                        <button id="users-choice" class="shape"><img src="images/icon-scissors.svg" alt="Scissors"></button>
+                        <button id="users-choice" class="shape"></button>
                         <span>You Picked</span>
                     </div>
                     <div class="column">
@@ -45,12 +45,13 @@
                     </div>
                 </div>
                 <div class="result invisible">
-                    <span class="win invisible">You Win</span>
-                    <span class="lose invisible">You Lose</span>
+                    <span class="win">You Win</span>
+                    <span class="lose">You Lose</span>
+                    <span class="tie">It's a tie</span>
                     <button class="btn play-again" onclick="playAgain()">Play Again</button>
                 </div>
             </section>
-        </section>
+        </div>
         <button class="btn rules" onclick="toggleShowRules()">Rules</button>
         <div class="modal invisible">
             <div class="modal-content">

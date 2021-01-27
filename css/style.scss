@@ -14,12 +14,12 @@ body{
     margin: 1em auto;
 }
 .invisible{
-    display: none;
+    display: none !important;
 }
 .container{
     max-width: 1366px;
 }
-header, .summary{
+header, #main{
     max-width: 680px;
     margin: auto;
 }
@@ -60,7 +60,7 @@ header{
         }
     }
 }
-.summary{
+#main{
     margin-top: 7em;
     margin-bottom: 7em;
 }
@@ -215,7 +215,7 @@ header{
     color: rgb(109, 138, 255);
 }
 @media screen and (min-width: 500px){
-    .summary{
+    #main{
         margin-top: 4.5em;
         margin-bottom: 3em;
     }
